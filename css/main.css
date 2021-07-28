@@ -76,7 +76,7 @@ body{
 
 /* header responsiveness -------------------- */
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
     .first-page{
         height: 97vh;
     }
@@ -104,9 +104,9 @@ body{
         padding: 0 10px;
     }
 }
-@media screen and (min-width: 400px) and (max-width: 800px) {
+/* @media screen and (min-width: 600px) and (max-width: 800px) {
 
-}
+} */
 
 
 /* project section ---------- */
@@ -177,7 +177,7 @@ body{
 }
 
 /* intro section responsiveness ---------------- */
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
     .text-div{
         padding: 4rem 0 16rem 0;
     }
@@ -212,9 +212,9 @@ body{
         
     }
 }
-@media screen and (min-width: 400px) and (max-width: 800px) {
+/* @media screen and (min-width: 600px) and (max-width: 800px) {
 
-}
+} */
 
 /* footer section ----------- */
 .my-projects{
@@ -308,7 +308,7 @@ figure:hover figcaption{
     margin: 40px 0 150px;
 }
 /* project section responsiveness ----------- */
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
 
     .project-section-title{
         margin: 15px 0 10px;
@@ -341,7 +341,7 @@ figure:hover figcaption{
         background-color: var(--theme);
     }
 }
-@media screen and (min-width: 400px) and (max-width: 800px) {
+@media screen and (min-width: 600px) and (max-width: 800px) {
 
 }
 
@@ -434,7 +434,7 @@ figure:hover figcaption{
 
 /* footer responsiveness ----------- */
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
     .start-a-project{
         position: relative;
         top: -50px;
@@ -477,6 +477,6 @@ figure:hover figcaption{
         margin-top: 0;
     }
 }
-@media screen and (min-width: 400px) and (max-width: 800px) {
+/* @media screen and (min-width: 600px) and (max-width: 800px) {
 
-}
+} */
