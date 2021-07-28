@@ -1,0 +1,483 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/17544686b3.js" crossorigin="anonymous"></script>
+    <title>St. Code</title>
+</head>
+<body>
+    <div class="first-page">
+        <header class="header">
+            <div class="logo">
+                <h2>St. Pardon</h2>
+            </div>
+            <div class="btn-cta"> <!-- call to action button -->
+                <a href="">Say Hello</a>
+            </div> 
+        </header>
+        <div class="welcome-text">
+            <!-- <i class="fas fa-laptop-code"></i> -->
+            <h1>Front-end Developer, Data Analyst and Tutor</h1>
+            <p>I code and build beautiful website and web apps, and i enjoy it.</p>
+        </div>
+        <div class="img-png">
+            <img src="/images/Untitled-2.png" alt="laptop X coffee image">
+        </div>
+    </div>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500&family=Yomogi&family=Zen+Tokyo+Zoo&display=swap');
+        
+        *{
+            box-sizing: border-box;
+            font-size: 18px;
+            margin: 0;
+            padding: 0;
+            --logo: 'Zen Tokyo Zoo', cursive;
+            --header: 'Barlow', sans-serif;
+            --para: font-family: 'Yomogi', cursive;
+            --theme: rgb(76, 236, 76);
+        }
+        body{
+            scroll-behavior: smooth;
+
+        }
+        .first-page{
+            height: 97vh;
+        }
+        .header{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .logo{
+            margin: 8px 0 0 30px;
+        }
+        .logo h2, .footer h3{
+            color: var(--theme);
+            font-family: var(--logo);
+            font-size: 1.5rem;
+        }
+        .btn-cta a, .btn-cpn a{
+            background: unset;
+            border: 3px solid var(--theme);
+            border-radius: 20px;
+            color: var(--theme);
+            font-family: var(--para);
+            font-size: 1rem;
+            text-decoration: none;
+            padding: 8px;
+        }
+        .btn-cta{
+            color: var(--theme);
+            margin: 20px 30px 0 0;
+        }
+        .welcome-text{
+            align-items: center;
+            color: #141c3a;
+            display: flex;
+            flex-direction: column;
+            margin-top: 15vh;
+        }
+        .welcome-text h1{
+            font-size: 2rem;
+            font-family: var(--header);
+            font-weight: 800;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .welcome-text p{
+            font-family: var(--para);
+            font-size: 1.3rem;
+        
+        }
+        .img-png{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+        .img-png img{
+            width: 100%;
+            max-height: 520px;
+        }
+    </style>
+    <section class="intro">
+        <div class="container">
+            <div class="text-div">
+                <div>
+                    <h3>Hi, I'm Onyedikachi. Lovely to meet you.</h3>
+                    <p>
+                        Since my transition into tech, gathered a handful of knowledge in front-end development, looking to get into backedn and eventually fullstack development. As a self-taught, self established developer, i'm naturally curious, and perpetually working to improve and increase my knowledge and skills.
+                    </p>
+                </div>
+            </div>
+            <div class="skill-div">
+                <div class="skill-div-container">
+                    <div style="border-radius: 10px 0 0 10px;">
+                        <i class="fas fa-code"></i>
+                        <h4>Front-end Developer</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa porro qui nisi officiis quo magni architecto.</p>
+                        <p class="themed-p">Languages I code:</p>
+                        <p>HTML, CSS, Javascript, React</p>
+                        <p class="themed-p">Dev Tools</p>
+                        <ul>
+                            <li>VS Code</li>
+                            <li>Github</li>
+                            <li>Terminal</li>
+                            <li>Codepen</li>
+                            <li>FontAwsome</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <i class="fas fa-database"></i>
+                        <h4>Data Analist</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa porro qui nisi officiis quo magni architecto.</p>
+                        <p class="themed-p">Tools I use:</p>
+                        <p>Python, SPSS, Excel, E-views</p>
+                        <p class="themed-p">Dev Tools</p>
+                        <ul>
+                            <li>Jupiters Notebook</li>
+                            <li>VS Code</li>
+                            <li>Github</li>
+                            <li>Terminal</li>
+                            <li>Codepen</li>
+                        </ul>
+                    </div>
+                    <div style="border-radius: 0 10px 10px 0;">
+                        <i class="fas fa-cloud"></i>
+                        <h4>Cloud Computing</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa porro qui nisi officiis quo magni architecto.</p>
+                        <p class="themed-p">Services I use:</p>
+                        <p>AWS, Jenkins, Docker</p>
+                        <p class="themed-p">Dev Tools</p>
+                        <ul>
+                            <li>Remote Desktop</li>
+                            <li>CL</li>
+                            <li>CI/CD</li>
+                            <li>Terminal</li>
+                            <li>Instance</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <style>
+        .text-div{
+            background: linear-gradient(45deg, var(--theme), #a8e063);
+            /* height: 80vh; */
+            padding: 8rem 0 16rem 0;
+        }
+        .text-div div{
+            margin: 0 auto 0 auto;
+            text-align: center;
+            width: 60%;
+        }
+        .text-div div h3{
+            font-family: var(--header);
+            font-size: 1.8em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .text-div div p{ 
+            font-size: 1.2rem;
+            line-height: 1.5;
+            text-align: center;
+            font-family: var(--para);
+            /* word-wrap: break-word; */
+        }
+
+        .skill-div-container{
+            background-color: #fff;
+            box-shadow: -1px 11px 25px -13px rgba(56,62,58,0.6);
+            -webkit-box-shadow: -1px 11px 25px -13px rgba(56,62,58,0.6);
+            -moz-box-shadow: -1px 11px 25px -13px rgba(56,62,58,0.6);
+            /* height: 50vh; */
+            border-radius: 10px;
+            font-family: var(--para);
+            margin: 0 auto;
+            position: relative;
+            text-align: center;
+            top: -160px;
+            width: 73vw;
+            display: flex;
+            flex-direction: row;
+            /* box-shadow: var(--theme); */
+        }
+        .skill-div-container div{
+            padding: 30px;
+            border: 1px solid #f4f4f4;
+        }
+        .skill-div-container i{
+            color: var(--theme);
+            font-size: 2.5rem;
+            padding-top: 30px;
+        }
+        .skill-div-container h4{
+            font-size: 1.2rem;
+            
+        }
+        .themed-p{
+            color: var(--theme);
+            font-size: 1.1rem;
+            
+        }
+        .skill-div-container i, .skill-div-container p, .skill-div-container h4{
+            margin: 0 0 25px;
+            line-height: 1.5rem;
+        }
+        .skill-div-container ul li{
+            list-style: none;
+            padding: 5px 0;
+        }
+    </style>
+    <section class="my-projects">
+        <h2 class="project-section-title">My Recent Works</h2>
+        <p class="project-section-description">Here are a few projects I'm working. Want to see more? <a href="" style="text-decoration: none;">my github</a></p>
+        <div class="fig-container">
+            <figure class="figure">
+                <img src="/images/ernate.jpg" alt="Ernate logo">
+                <figcaption>
+                    <div class="overlay"></div>
+                    <div class="caption">
+                        <p class="fig-description">A leading engineering firm, experts in Real Estate and Construction. </p>
+                        <a class="visit-site" href="">Visit Site</a>
+                    </div>
+                </figcaption>
+            </figure>
+            <figure class="figure">
+                <img src="/images/st pardon.jpg" alt="st pardon logo">
+                <figcaption>
+                    <div class="overlay"></div>
+                    <div class="caption">
+                        <p class="fig-description">An emerging tech firm, looking to revolutionize the tech industry.</p>
+                        <a class="visit-site" href="">Visit Site</a>
+                    </div>
+                </figcaption>
+            </figure>
+            <figure class="figure">
+                <img src="/images/profile avata.jpg" alt="">
+                <figcaption>
+                    <div class="overlay"></div>
+                    <div class="caption">
+                        <p class="fig-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolorum expedita molestiae reru</p>
+                        <a class="visit-site" href="">Visit Site</a>
+                    </div>
+                </figcaption>
+            </figure>
+            <!-- <div></div> -->
+            <!-- <div></div> -->
+            <!-- <div></div> -->
+        </div>
+        <div class="btn-cpn"> <!-- call to action button -->
+            <a href="https://codepen.io/st_pardon/">See more on Codepen</a>
+        </div>
+    </section>
+    <style>
+        .my-projects{
+            border-bottom: 1px solid;
+            text-align: center;
+            width: 100%;
+        }
+        .project-section-title{
+            font-family: var(--header);
+            font-size: 1.5rem;
+            margin: 25px 0 10px;
+        }
+        .project-section-description,
+        .project-section-description a{
+            font-family: var(--para);
+            font-size: 1.1rem;
+            margin: 0 0 50px;
+        }
+        .fig-container{
+            display: flex;
+            margin: 0 auto;
+            padding: 0;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            overflow: hidden;
+            width: 70%;
+        }
+        .figure{
+            display: flex;
+            width: 30%;
+            position: relative;
+            height: 20%;
+            overflow: hidden;
+            background-color: #2980b9;
+            border-radius: 15px;
+        }
+        .figure img{
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            transition:all 0.35s ease-in-out;
+        }
+        .figure:hover img{
+            opacity: 0;
+		    transform: scale(1.15,1.15);
+        }
+        figcaption{
+            position: absolute;
+            width: 100%;
+            height: max-content;
+            display: flex;
+            transition: all 0.45s ease-in-out;
+            opacity: 0;
+        }
+        figure:hover figcaption{
+            opacity: 1;
+        }
+        .overlay{
+            background-color: rgba(0, 0, 0, 0.6);
+            transition: all 0.45s ease-in-out;
+            width: 100%;
+            height: 360px;
+            z-index: 5;
+        }
+        .visit-site {
+            border: 1px solid var(--theme);
+            border-radius: 15px;
+            padding: 5px 10px;
+            text-decoration: none;
+            color: var(--theme);
+            font-size: 1.2rem;
+            margin: 15% auto 0;
+            display: block;
+            width: max-content;
+        }
+        .visit-site:hover {
+            background-color: var(--theme);
+            color: white;
+        }
+        .caption{
+            position: absolute;
+            z-index: 10;
+            margin-top: 20%;
+            padding: 10%;
+        }
+        .fig-description{
+            color: white;
+            font-size: 100%;
+        }
+        .btn-cpn{
+            margin: 40px 0 150px;
+        }
+    </style>
+    <footer class="footer">
+        <div class="start-a-project">
+            <p class="sap-child">Start a project</p>
+            <p class="sap-child">Interested in working together? We should meet up for a chat. I’ll love to have you.</p>
+            <div class="sap-child">
+                <a href="">Let's do this</a>
+            </div>
+        </div>
+        <h3>St. Pardon</h3>
+        <p class="footnote footnote1">Building the future</p>
+        <div class="contact-icons">
+            <a href="http://https://web.facebook.com/St_Pardon-Inc-1609476265978914" target="_blank" class="contact-btn"> 
+                <i class="fab fa-facebook"></i></a>
+            <a href="http://twitter.com/st_pardon" target="_blank" class="contact-btn"> 
+                <i class="fab fa-twitter"></i></a>
+            <a href="http://https://github.com/St-Pardon" target="_blank" class="contact-btn"> 
+                <i class="fab fa-github"></i></a>
+            <a href="mailto:d_pardon@live.com"  class="contact-btn"> 
+                <i class="fas fa-at"></i></a>
+            <a href="http://https://codepen.io/st_pardon" target="_blank" class="contact-btn"> 
+                <i class="fab fa-codepen"></i></a>
+        </div>
+        <p class="footnote footnote2">Developed by me &copy; 2021</p>
+        <p class="footnote footnote3">Inspired by Matt Farley</p>
+    </footer>
+    <style>
+        .footer{
+            background: linear-gradient(45deg, var(--theme), #a8e063);
+            width: 100%;
+        }
+        .start-a-project{
+            background-color: #141c3a;
+            border-radius: 15px;
+            font-family: var(--para);
+            margin: 0 auto;
+            position: relative;
+            text-align: center;
+            top: -60px;
+            width: 90%;
+            display: flex;
+            flex-direction: row;
+            height: 200px;
+            justify-content: space-evenly;
+        }
+        .sap-child  {
+            align-self: center;
+            width: 30%;
+            padding: 5px;
+            font-family: var(--header);
+            color: whitesmoke;
+        }
+        .sap-child:nth-child(1){
+            font-size: 1.5rem;
+        }
+        .sap-child:nth-child(2){
+            font-size: 1rem;
+            font-family: var(--para);
+        }
+        .sap-child a{
+            border: 2px solid var(--theme);
+            font-size: 1rem;
+            font-family: var(--header);
+            text-decoration: none;
+            color: whitesmoke;
+            padding: 5px 15px;
+            border-radius: 20px;
+        }
+        .sap-child a:hover{
+            background-color: var(--theme);
+        }
+        .footer h3{
+            color: whitesmoke;
+            text-align: center;
+            font-size: 2.1rem;
+        }
+        .footnote{
+            text-align: center;
+            color: rgb(247, 240, 247);
+            font-size: 1.3rem;
+            font-family: var(--para);
+        }
+        .footnote1{
+            margin: 30px 0 0 0;
+            
+        }
+        .footnote2, .footnote3{
+            font-size: 1rem;
+            /* padding: 30px 0; */
+        }
+         .footnote3{
+            padding: 10 0 80px 0;
+        }
+
+        .contact-icons{
+            margin: 30px auto;
+            text-align: center;
+        }
+        .contact-btn {
+            font-size: 5rem;
+            color: floralwhite;
+            display: inline-block;
+            padding: 16px 20px;
+            border-radius: 2px;
+            transition: transform 0.3s ease-out;
+            margin-top: 10px;
+        }
+        .contact-btn i{
+            font-size: 1.6rem;  
+        }
+
+        .contact-btn:hover {
+            transform: translateY(5px);
+        }
+    </style>
+</body>
+</html>
