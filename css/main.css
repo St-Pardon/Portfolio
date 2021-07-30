@@ -16,7 +16,7 @@ html{
 
 /* styling for the header section ------------ */
 .first-page{
-    height: 97vh;
+    min-height: 97vh;
 }
 .header{
     display: flex;
@@ -77,36 +77,10 @@ html{
     width: 100%;
     max-height: 520px;
 }
-
-/* header responsiveness -------------------- */
-
-@media screen and (max-width: 600px) {
-    *{
-        font-size: 18px;
-    }
-
-    .logo{
-        margin: 10px 0 0 20px;
-    }
-    .logo h2{
-        font-size: 1.5rem;
-    }
-    .btn-cta a{
-        display: none;
-    }
-
-    .welcome-text h1{
-        font-size: 1.65rem;
-
-    }
-    .welcome-text p{
-        font-size: 1.15rem;
-        padding: 0 10px;
-    }
-}     .navbar{
+.navbar{
     display: flex;
 }
-.fa-bars{
+.hamburger{
     display: none;
 }
 .navbar ul{
@@ -129,23 +103,50 @@ html{
     border-radius: 15px;
     background-color: var(--theme);
 }
+
+/* header responsiveness -------------------- */
+
+@media screen and (max-width: 600px) {
+    *{
+        font-size: 18px;
+    }
+
+    .logo{
+        margin: 10px 0 0 20px;
+    }
+    .logo h2{
+        font-size: 1.5rem;
+    }
+
+
+    .welcome-text h1{
+        font-size: 1.65rem;
+
+    }
+    .welcome-text p{
+        font-size: 1.15rem;
+        padding: 0 10px;
+    }
+}     
 @media screen and (max-width: 800px) {
     .navbar{
         display: flex;
         flex-direction: column;
-        /* border: 1px solid red; */
         position: absolute;
-        top: 100px;
+        top: 66px;
         width: 100%;
         height: 100vh;
         text-align: center;
         padding: 20% 0 0 0;
         background-color: var(--theme);
         z-index: 3;
-        clip-path: circle(100px at 90% -10%);
-        -webkit-clip-path: circle(100px at 90% -10%);
+        clip-path: circle(3px at 90% -20%);
+        -webkit-clip-path: circle(3px at 90% -20% );
         transition: all .5s ease-out;
-        pointer-events: none;
+        /* pointer-events: none; */
+    }
+    .hamburger{
+        display: block;
     }
     .fa-bars{
         display: block;
@@ -153,7 +154,6 @@ html{
         font-size: 2rem;
         top: 15;
         right: 15;
-        z-index: ;
         cursor: pointer;
         color: var(--theme);
     }
