@@ -16,4 +16,4 @@ links[1].onclick = () => {
     nav.classList.remove("open");
     nav.classList.toggle("close");
     console.log("closed")
-};
+}; 
