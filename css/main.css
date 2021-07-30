@@ -15,9 +15,7 @@ html{
 }
 
 /* styling for the header section ------------ */
-.first-page{
-    /* min-height: 100%; */
-}
+
 .header{
     display: flex;
     flex-direction: row;
@@ -71,10 +69,9 @@ html{
 .img-png{
     height: 300px;
     width: 100%;
-    /* position: absolute; */
-    margin-top: 13%;
-    bottom: 0;
-    left: 37;
+    
+    margin-top: 11.6%;
+    
 }
 .img-png img{
     width: 100%;
@@ -130,6 +127,12 @@ html{
     .welcome-text p{
         font-size: 1.15rem;
         padding: 0 10px;
+    }
+    .img-png{
+        height: unset;
+        width: 80%;
+        margin: 60% auto 0 auto;
+
     }
 }     
 @media screen and (max-width: 800px) {
