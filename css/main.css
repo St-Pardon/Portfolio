@@ -16,7 +16,7 @@ html{
 
 /* styling for the header section ------------ */
 .first-page{
-    min-height: 97vh;
+    /* min-height: 100%; */
 }
 .header{
     display: flex;
@@ -69,13 +69,16 @@ html{
     text-align: center;
 }
 .img-png{
-    position: absolute;
-    bottom: 0;
+    height: 300px;
     width: 100%;
+    /* position: absolute; */
+    margin-top: 13%;
+    bottom: 0;
+    left: 37;
 }
 .img-png img{
     width: 100%;
-    max-height: 520px;
+    max-height: 100%;
 }
 .navbar{
     display: flex;
@@ -228,7 +231,7 @@ html{
 }
 
 
-/* project section ---------- */
+/* about section ---------- */
 .text-div{
     background: linear-gradient(45deg, var(--theme), #a8e063);
     padding: 8rem 0 16rem 0;
