@@ -26,9 +26,134 @@
             <div class="logo">
                 <h2>St. Pardon</h2>
             </div>
-            <div class="btn-cta"> <!-- call to action button -->
-                <a href="">Say Hello</a>
-            </div> 
+            <nav class="navbar">
+                <ul>
+                    <li class="nav-links"><a class="links"  href="#about">About</a></li>
+                    <li class="nav-links"><a class="links" href="#project">Projects</a></li>
+                </ul>
+                <div class="btn-cta"> <!-- call to action button -->
+                    <a href="https://wa.me/2348167690780?text=hello, i want you to build my site"">Say Hello</a>
+                </div> 
+            </nav>
+            <i class="fas fa-bars"></i>
+            <script>
+                const nav = document.querySelector(".navbar");
+                const hamburger = document.querySelector(".fa-bars");
+                const links = document.querySelector(".links");
+        
+                hamburger.addEventListener("click", () => {
+                    nav.classList.toggle("open");
+                    console.log("opened")
+                });
+                links.addEventListener("click", () => {
+                    nav.classList.toggle("close");
+                    console.log("closed")
+                });
+
+            </script>
+            <style>
+                .navbar{
+                    display: flex;
+                }
+                .fa-bars{
+                    display: none;
+                }
+                .navbar ul{
+                    list-style: none;
+                    line-height: 1.5;
+                    margin: 20px 20px;      
+                }
+                .nav-links{
+                    display: inline-block;
+                    padding: 0;
+                }
+                .nav-links a{
+                    padding: 10px 20px;
+                    text-decoration: none;
+                    color: var(--theme);
+                    font-size: 1.2rem;
+                }
+                .nav-links:hover a{
+                    color: white;
+                    border-radius: 15px;
+                    background-color: var(--theme);
+                }
+                @media screen and (max-width: 800px) {
+                    .navbar{
+                        display: flex;
+                        flex-direction: column;
+                        /* border: 1px solid red; */
+                        position: absolute;
+                        top: 100px;
+                        width: 100%;
+                        height: 100vh;
+                        text-align: center;
+                        padding: 20% 0 0 0;
+                        background-color: var(--theme);
+                        z-index: 3;
+                        clip-path: circle(100px at 90% -10%);
+                        -webkit-clip-path: circle(100px at 90% -10%);
+                        transition: all .5s ease-out;
+                        pointer-events: none;
+                    }
+                    .fa-bars{
+                        display: block;
+                        position: absolute;
+                        font-size: 2rem;
+                        top: 15;
+                        right: 15;
+                        z-index: ;
+                        cursor: pointer;
+                        color: var(--theme);
+                    }
+                    .navbar.open{
+                        clip-path: circle(1500px at 90% 10%);
+                        -webkit-clip-path: circle(1500px at 90% 10%);
+                        pointer-events: all;
+                    }
+                    .navbar ul{
+                        margin: 20px 0 0;      
+                    }
+                    .nav-links{
+                        display: block;
+                        padding: 20px 0;
+                    }
+                    .nav-links a{
+                        padding: 10px 20px;
+                        font-size: 1.4rem;
+                        color: white
+                    }
+                    .nav-links:hover a{
+                        color: white;
+                        border-radius: 15px;
+                        background-color: var(--theme);
+                    }
+                    .navbar.close{
+                        clip-path: circle(100px at 90% -10%);
+                        -webkit-clip-path: circle(100px at 90% -10%);
+                        transition: all .5s ease-out;
+                        pointer-events: none;
+                    }
+                    .btn-cta a{
+                        background: unset;
+                        border: 3px solid #141c3a;
+                        border-radius: 20px;
+                        color: #141c3a;
+                        font-family: var(--para);
+                        font-size: 1.4rem;
+                        text-decoration: none;
+                        padding: 8px;
+                    }
+                    .btn-cta a:hover{
+                        background: #141c3a;
+                        color: whitesmoke; 
+                    }
+                    .btn-cta{
+                        color: var(--theme);
+                        margin: 30px 0px 0 0;
+                    }
+                }
+            </style>
         </header>
         <div class="welcome-text">
             <!-- <i class="fas fa-laptop-code"></i> -->
@@ -40,7 +165,7 @@
         </div>
     </div>
     <!-- header section -->
-    <section class="intro">
+    <section id="about" class="intro">
         <div class="container">
             <div class="text-div">
                 <div>
@@ -102,7 +227,7 @@
         </div>
     </section>
     <!-- project section -->
-    <section class="my-projects">
+    <section id="project" class="my-projects">
         <h2 class="project-section-title">My Recent Works</h2>
         <p class="project-section-description">Here are few projects I'm working. Want to see more? <a href="" style="text-decoration: none;">my github</a></p>
         <div class="fig-container">

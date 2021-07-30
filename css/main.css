@@ -2,7 +2,7 @@
 
 *{
     box-sizing: border-box;
-    font-size: 18px;
+    font-size: 25px;
     margin: 0;
     padding: 0;
     --logo: 'Zen Tokyo Zoo', cursive;
@@ -10,7 +10,7 @@
     --para: font-family: 'Yomogi', cursive;
     --theme: rgb(76, 236, 76);
 }
-body{
+html{
     scroll-behavior: smooth;
 }
 
@@ -24,7 +24,7 @@ body{
     justify-content: space-between;
 }
 .logo{
-    margin: 8px 0 0 30px;
+    margin: 15px 0 0 50px;
 }
 .logo h2, .footer h3{
     color: var(--theme);
@@ -41,9 +41,13 @@ body{
     text-decoration: none;
     padding: 8px;
 }
+.btn-cta a:hover, .btn-cpn a:hover{
+    background: var(--theme);
+    color: whitesmoke; 
+}
 .btn-cta{
     color: var(--theme);
-    margin: 20px 30px 0 0;
+    margin: 30px 30px 0 0;
 }
 .welcome-text{
     align-items: center;
@@ -77,14 +81,10 @@ body{
 /* header responsiveness -------------------- */
 
 @media screen and (max-width: 600px) {
-    .first-page{
-        height: 97vh;
+    *{
+        font-size: 18px;
     }
-    .header{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
+
     .logo{
         margin: 10px 0 0 20px;
     }
@@ -103,10 +103,128 @@ body{
         font-size: 1.15rem;
         padding: 0 10px;
     }
+}     .navbar{
+    display: flex;
 }
-/* @media screen and (min-width: 600px) and (max-width: 800px) {
+.fa-bars{
+    display: none;
+}
+.navbar ul{
+    list-style: none;
+    line-height: 1.5;
+    margin: 20px 20px;      
+}
+.nav-links{
+    display: inline-block;
+    padding: 0;
+}
+.nav-links a{
+    padding: 10px 20px;
+    text-decoration: none;
+    color: var(--theme);
+    font-size: 1.2rem;
+}
+.nav-links:hover a{
+    color: white;
+    border-radius: 15px;
+    background-color: var(--theme);
+}
+@media screen and (max-width: 800px) {
+    .navbar{
+        display: flex;
+        flex-direction: column;
+        /* border: 1px solid red; */
+        position: absolute;
+        top: 100px;
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+        padding: 20% 0 0 0;
+        background-color: var(--theme);
+        z-index: 3;
+        clip-path: circle(100px at 90% -10%);
+        -webkit-clip-path: circle(100px at 90% -10%);
+        transition: all .5s ease-out;
+        pointer-events: none;
+    }
+    .fa-bars{
+        display: block;
+        position: absolute;
+        font-size: 2rem;
+        top: 15;
+        right: 15;
+        z-index: ;
+        cursor: pointer;
+        color: var(--theme);
+    }
+    .navbar.open{
+        clip-path: circle(1500px at 90% 10%);
+        -webkit-clip-path: circle(1500px at 90% 10%);
+        pointer-events: all;
+    }
+    .navbar ul{
+        margin: 20px 0 0;      
+    }
+    .nav-links{
+        display: block;
+        padding: 20px 0;
+    }
+    .nav-links a{
+        padding: 10px 20px;
+        font-size: 1.4rem;
+        color: white
+    }
+    .nav-links:hover a{
+        color: white;
+        border-radius: 15px;
+        background-color: var(--theme);
+    }
+    .navbar.close{
+        clip-path: circle(100px at 90% -10%);
+        -webkit-clip-path: circle(100px at 90% -10%);
+        transition: all .5s ease-out;
+        pointer-events: none;
+    }
+    .btn-cta a{
+        background: unset;
+        border: 3px solid #141c3a;
+        border-radius: 20px;
+        color: #141c3a;
+        font-family: var(--para);
+        font-size: 1.4rem;
+        text-decoration: none;
+        padding: 8px;
+    }
+    .btn-cta a:hover{
+        background: #141c3a;
+        color: whitesmoke; 
+    }
+    .btn-cta{
+        color: var(--theme);
+        margin: 30px 0px 0 0;
+    }
+}
+@media screen and (min-width: 600px) and (max-width: 1000px) {
+    .logo{
+        margin: 10px 0 0 20px;
+    }
+    .logo h2{
+        font-size: 1.5rem;
+    }
 
-} */
+    .welcome-text{
+        width: 90%;
+        margin: 15vh auto;
+    }
+    .welcome-text h1{
+        font-size: 1.8rem;
+
+    }
+    .welcome-text p{
+        font-size: 1.25rem;
+
+    }
+}
 
 
 /* project section ---------- */
@@ -212,9 +330,27 @@ body{
         
     }
 }
-/* @media screen and (min-width: 600px) and (max-width: 800px) {
+@media screen and (min-width: 600px) and (max-width: 1000px) {
+    .text-div{
+        padding: 6rem 0 16rem 0;
+    }
+    .text-div div{
+        width: 100%;
+    }
+    .text-div div h3{
+        font-size: 1.6em;
 
-} */
+    }
+    .text-div div p{ 
+        font-size: 1.2rem;
+        padding: 0 30px;
+    }
+
+    .skill-div-container{
+        width: 90vw;
+    }
+  
+}
 
 /* footer section ----------- */
 .my-projects{
@@ -246,6 +382,7 @@ body{
     width: 30%;
     position: relative;
     height: 20%;
+    border: 1px solid var(--theme);
     overflow: hidden;
     background-color: #2980b9;
     border-radius: 15px;
@@ -275,7 +412,7 @@ figure:hover figcaption{
     background-color: rgba(0, 0, 0, 0.6);
     transition: all 0.45s ease-in-out;
     width: 100%;
-    height: 360px;
+    height: 500px;
     z-index: 5;
 }
 .visit-site {
@@ -308,8 +445,34 @@ figure:hover figcaption{
     margin: 40px 0 150px;
 }
 /* project section responsiveness ----------- */
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 600px) and (max-width: 1000px) {
+    .project-section-title{
+        margin: 15px 0 10px;
+    }
+    .project-section-description,
+    .project-section-description a{
+        padding: 0 10px;
+    }
+    .fig-container{
+        width: 90%;
+    }
+    .caption{
+         margin-top: 30px;
+        padding: 5px;
+    }
+    .fig-description{
+ 
+        font-size: 0.7rem;
+    }
+    .visit-site{
+        font-size: 0.8rem;
+        border-radius: 25px;
+ 
+    }
 
+}
+@media screen and (max-width: 600px) {
+    
     .project-section-title{
         margin: 15px 0 10px;
     }
@@ -330,19 +493,12 @@ figure:hover figcaption{
     .caption{
          padding: 3%;
     }
-    .fig-description{
-        color: white;
-        font-size: 100%;
-    }
     .btn-cpn a{
         font-size: 1.5rem;
         border-radius: 5px;
         color: whitesmoke;
         background-color: var(--theme);
     }
-}
-@media screen and (min-width: 600px) and (max-width: 800px) {
-
 }
 
 /* footer section ---------- */
@@ -358,7 +514,7 @@ figure:hover figcaption{
     position: relative;
     text-align: center;
     top: -60px;
-    width: 90%;
+    width: 75%;
     display: flex;
     flex-direction: row;
     height: 200px;
@@ -380,11 +536,11 @@ figure:hover figcaption{
 }
 .sap-child a{
     border: 2px solid var(--theme);
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-family: var(--header);
     text-decoration: none;
     color: whitesmoke;
-    padding: 5px 15px;
+    padding: 10px 25px;
     border-radius: 20px;
 }
 .sap-child a:hover{
@@ -423,7 +579,7 @@ figure:hover figcaption{
     padding: 16px 20px;
     border-radius: 2px;
     transition: transform 0.3s ease-out;
-    margin-top: 10px;
+    margin-top: 10px; 
 }
 .contact-btn i{
     font-size: 1.6rem;  
@@ -477,6 +633,28 @@ figure:hover figcaption{
         margin-top: 0;
     }
 }
-/* @media screen and (min-width: 600px) and (max-width: 800px) {
+@media screen and (min-width: 600px) and (max-width: 1000px) {
+    .start-a-project{
+        width: 90%;
+    }
 
-} */
+    .sap-child:nth-child(1){
+        font-size: 1.1rem;
+    }
+     .sap-child:nth-child(2){
+        font-size: 0.85rem;
+    }
+    .sap-child a{
+        font-size: 1rem;
+        font-size: 0.89rem;
+        padding: 13px 16px;
+    }
+    .footer h3{
+
+        font-size: 1.8rem;
+    }
+    .footnote{
+        font-size: 1rem;
+ 
+    }
+}
