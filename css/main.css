@@ -103,7 +103,8 @@ html{
         font-size: 1.15rem;
         padding: 0 10px;
     }
-}     .navbar{
+}     
+.navbar{
     display: flex;
 }
 .fa-bars{
@@ -135,15 +136,15 @@ html{
         flex-direction: column;
         /* border: 1px solid red; */
         position: absolute;
-        top: 100px;
+        top: 80px;
         width: 100%;
         height: 100vh;
         text-align: center;
         padding: 20% 0 0 0;
         background-color: var(--theme);
         z-index: 3;
-        clip-path: circle(100px at 90% -10%);
-        -webkit-clip-path: circle(100px at 90% -10%);
+        clip-path: circle(10px at 90% -10%);
+        -webkit-clip-path: circle(10px at 90% -10%);
         transition: all .5s ease-out;
         pointer-events: none;
     }
