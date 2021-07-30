@@ -134,15 +134,15 @@ html{
         flex-direction: column;
         /* border: 1px solid red; */
         position: absolute;
-        top: 80px;
+        top: 60px;
         width: 100%;
         height: 100vh;
         text-align: center;
         padding: 20% 0 0 0;
         background-color: var(--theme);
         z-index: 3;
-        clip-path: circle(10px at 90% -10%);
-        -webkit-clip-path: circle(10px at 90% -10%);
+        clip-path: circle(10px at 100% -20%);
+        -webkit-clip-path: circle(10px at 100% -20%);
         transition: all .5s ease-out;
         pointer-events: none;
     }
