@@ -2,7 +2,7 @@
 
 *{
     box-sizing: border-box;
-    font-size: 25px;
+    font-size: 18px;
     margin: 0;
     padding: 0;
     --logo: 'Zen Tokyo Zoo', cursive;
@@ -289,6 +289,7 @@ html{
 }
 .skill-div-container div{
     padding: 30px;
+    width: inherit;
     border: 1px solid #f4f4f4;
 }
 .skill-div-container i{
@@ -401,7 +402,7 @@ html{
     display: flex;
     width: 30%;
     position: relative;
-    height: 20%;
+    /* height: 20%; */
     border: 1px solid var(--theme);
     overflow: hidden;
     background-color: #2980b9;
