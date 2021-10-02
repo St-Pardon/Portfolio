@@ -2,16 +2,16 @@
 
 *{
     box-sizing: border-box;
-    font-size: 18px;
     margin: 0;
     padding: 0;
     --logo: 'Zen Tokyo Zoo', cursive;
     --header: 'Barlow', sans-serif;
-    --para: font-family: 'Yomogi', cursive;
+    --para: 'Yomogi', cursive;
     --theme: rgb(76, 236, 76);
 }
 html{
     scroll-behavior: smooth;
+    font-size: 18px;
 }
 
 /* styling for the header section ------------ */
@@ -521,6 +521,90 @@ figure:hover figcaption{
         color: whitesmoke;
         background-color: var(--theme);
     }
+}
+
+/* form styling ------------- */
+.forms{
+    display: none;
+    margin: 0;
+    width: 100%;
+    background-color: white;
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    bottom: 0; 
+    height: 90%; 
+    overflow: auto; 
+}
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-right: 20px;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: rgb(248, 71, 71);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .form-note{
+      text-align: center;
+      font-family: var(--header);
+      margin: 20px 0 80px 0;
+      font-size: 1.7rem;
+  }
+.form{
+    width: 600px;
+    margin: 0 auto;
+    /* border: 2px solid red; */
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.input-container{
+    width: 280px;
+}
+.textarea-container{
+    width: 100%;
+    margin: 0 10px;
+}
+.input-area{
+    width: 100%;
+    height: 40px;
+    font-size: 1rem;
+    border: 0.5px solid rgba(76, 236, 76, 0.4);
+    color: black;
+    padding: 5px;
+    outline: none;
+}
+.label{
+    display: block;
+    font-family: var(--header);
+    font-size: 1.1rem;
+    color: var(--theme);
+    margin-bottom: 5px;
+}
+.textarea1{
+    display: block;
+    height: 200px;
+    resize: none;
+}
+.submit{
+    padding: 10px 50px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    border: 1px solid var(--theme);
+    color: var(--theme);
+    background-color: unset;
+}
+.submit:hover{
+    color: white;
+    background-color: var(--theme);
 }
 
 /* footer section ---------- */

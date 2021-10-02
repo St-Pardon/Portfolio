@@ -1,26 +1,35 @@
 <html lang="en">
 <head>
+    <!-- page fommarting -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="Front-End Developer">
-    <meta property="og:description" content="Front-End Developer">
-    <!-- <meta property="og:image" content="LINK TO THE IMAGE FILE" />
-    <meta property="og:url" content="PERMALINK" >
-    <meta property="og:site_name" content="SITE NAME" > -->
+    <meta name="theme-color" content="#4CEC4C">
+
+    <!-- open graphics -->
+    <meta property="og:type" content="Website">
+    <meta property="og:title" content="Front-End Developer | UX Engineer ">
+    <!-- <meta property="og:description" content="An excellent problem solver, commited to providing the best web Front-End services"> -->
+    <meta property="og:description" content="Your first choice for excellent Web/Front-End services. we are on click away">
+    <meta property="og:image" content="https://github.com/St-Pardon/Portfolio/blob/master/images/st%20pardon.jpg" />
+    <meta property="og:url" content="https://st-pardon.netlify.app/" >
+    <meta property="og:site_name" content="St. Pardon" >
+    
     <!-- twitter open graphics -->
-    <!--
-    <meta name="twitter:title" content="TITLE OF POST OR PAGE">
-    <meta name="twitter:description" content="DESCRIPTION OF PAGE CONTENT">
-    <meta name="twitter:image" content="LINK TO IMAGE">
-    <meta name="twitter:site" content="@USERNAME">
-    <meta name="twitter:creator" content="@USERNAME"> -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Front-End Developer | UX Engineer">
+    <meta name="twitter:description" content="Your first choice for excellent Web/Front-End services. we are on click away">
+    <meta name="twitter:image" content="https://github.com/St-Pardon/Portfolio/blob/master/images/st%20pardon.jpg">
+    <meta name="twitter:site" content="https://st-pardon.netlify.app/E">
+    <meta name="twitter:creator" content="@st_Pardon">
+    
+    <!-- style, script and ico links -->
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/css/main.css">
     <script src="https://kit.fontawesome.com/17544686b3.js" crossorigin="anonymous"></script>
     
-    <title>St. Code</title>
+    <!-- page titile -->
+    <title>St. Pardon</title>
 </head>
 <body>
     <div class="first-page">
@@ -34,7 +43,7 @@
                     <li class="nav-links"><a class="links" href="#project">Projects</a></li>
                 </ul>
                 <div class="btn-cta"> <!-- call to action button -->
-                    <a href="https://wa.me/2348167690780?text=hello, i want you to build my site" target="_blank">Say Hello</a>
+                    <a href="https://wa.me/2348167690780?text=hello, i would like you to build my website" target="_blank">Say Hello</a>
                 </div> 
             </nav>
             <div class="hamburger">
@@ -157,12 +166,12 @@
         </div>
     </section>
    <!-- footer section  -->
-    <footer class="footer">
-        <div class="start-a-project">
-            <p class="sap-child">Start a project</p>
+   <footer class="footer">
+       <div class="start-a-project">
+           <p class="sap-child">Start a project</p>
             <p class="sap-child">Interested in working together? We should meet up for a chat. I’ll love to have you.</p>
-            <div class="sap-child">
-                <a href="">Let's do this</a>
+            <div  class="sap-child">
+                <a id="open-form">Let's do this</a>
             </div>
         </div>
         <h3>St. Pardon</h3>
@@ -179,8 +188,49 @@
             <a href="https://codepen.io/st_pardon" target="_blank" class="contact-btn"> 
                 <i class="fab fa-codepen"></i></a>
         </div>
-        <p class="footnote footnote2">Developed by me &copy; 2021</p>
+        <p class="footnote footnote2">Developed by St. Pardon &copy; 2021</p>
         <p class="footnote footnote3">Inspired by Matt Farley</p>
+        <div id="forms" class="forms">
+            <span class="close">&times;</span>
+            <p class="form-note">Highly excited to work on your project.<br>Let's do this!</p>
+             <form class="form" action="">
+                 <div class="input-container">  
+                     <label class="label" for="name">Name</label>
+                     <input class="input-area" id="name" name="name" autofocus type="text" spellcheck="false" required>
+                 </div>
+                 <div class="input-container">  
+                     <label class="label" for="email">Email</label>
+                     <input class="input-area" type="email" name="email" id="email" required>
+                 </div>
+                 <div class="input-container" >  
+                     <label class="label" for="project-type">Type of project</label>
+                     <select style="cursor: pointer;" class="input-area" name="project-type" id="project-type" required>
+                         <option value="0" disabled selected hidden></option>
+                         <option value="frontend developement">Frontend development</option>
+                         <option value="backend development">Backend development</option>
+                         <!-- <option value="server"></option> -->
+                     </select>
+                 </div>
+                 <div class="input-container">  
+                     <label class="label" for="budget">Budget</label>
+                     <input class="input-area" type="text" name="budget" id="budget" list="budget-list" required>
+                     <datalist id="budget-list">
+                         <option value="$50-$100"></option>
+                         <option value="$100-$1000"></option>
+                         <option value="$1000-$10,000"></option>
+                         <option value="$10,000+"></option>
+                     </datalist>
+                 </div>
+                 <div class="textarea-container">
+                     <label class="label" for="additional-details">Additional details</label>
+                     <textarea class="input-area textarea1" name="additional-details" id="additional-details" cols="30" rows="10"></textarea>
+                 </div>
+        
+                <button id="submit" class="submit" type="submit">Submit</button>
+
+             </form>
+
+        </div>
     </footer>
     <!-- end -->
 </body>

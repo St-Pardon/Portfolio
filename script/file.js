@@ -18,3 +18,27 @@ links[1].onclick = () => {
     nav.classList.toggle("close");
     header.classList.toggle("collapse");
 }; 
+
+
+// for form handling
+
+const forms = document.getElementById("forms");
+const btn = document.getElementById("open-form");
+const span = document.getElementsByClassName("close")[0];
+
+
+btn.onclick = function() {
+  forms.style.display = "block";
+}
+
+
+span.onclick = function() {
+  forms.style.display = "none";
+}
+
+
+window.onclick = function(event) {
+  if (event.target == forms) {
+    forms.style.display = "none";
+  }
+}
