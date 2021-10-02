@@ -545,18 +545,17 @@ figure:hover figcaption{
     margin-right: 20px;
   }
   
-  .close:hover,
-  .close:focus {
+.close:hover, .close:focus {
     color: rgb(248, 71, 71);
     text-decoration: none;
     cursor: pointer;
-  }
-  .form-note{
-      text-align: center;
-      font-family: var(--header);
-      margin: 20px 0 80px 0;
-      font-size: 1.7rem;
-  }
+}
+.form-note{
+    text-align: center;
+    font-family: var(--header);
+    margin: 20px 0 80px 0;
+    font-size: 1.7rem;
+}
 .form{
     width: 600px;
     margin: 0 auto;
@@ -606,7 +605,12 @@ figure:hover figcaption{
     color: white;
     background-color: var(--theme);
 }
-
+@media screen and (max-width: 600px) {
+    .input-container{
+        width: 100%;
+    }
+    
+}
 /* footer section ---------- */
 .footer{
     background: linear-gradient(45deg, var(--theme), #a8e063);
