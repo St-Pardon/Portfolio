@@ -162,7 +162,7 @@
             <!-- <div></div> -->
         </div>
         <div class="btn-cpn"> <!-- call to action button -->
-            <a href="https://codepen.io/st_pardon/" target="_blank">See more on Codepen</a>
+            <a href="https://codepen.io/collection/LPpWxv" target="_blank">See more on Codepen</a>
         </div>
     </section>
     <img src="./images/logo1.jpg" style="display: none;" alt="">
@@ -194,15 +194,16 @@
         <div id="forms" class="forms">
             <span class="close">&times;</span>
             <p class="form-note">Highly excited to work on your project. Let's do this!</p>
-             <form class="form" action="/html/file.html" method="POST" name="contact" netlify>
+             <form class="form" subject="" action="/html/file.html" method="POST" name="contact" netlify>
                  <div class="input-container">  
                      <label class="label" for="name">Name</label>
                      <input class="input-area" id="name" name="name" autofocus type="text" spellcheck="false" required>
                  </div>
                  <div class="input-container">  
                      <label class="label" for="email">Email</label>
-                     <input class="input-area" type="email" name="email" id="email" required>
-                 </div>
+                     <input class="input-area" type="email" name="email" id="email" oninput="updateSubject()" required>
+                     <input id="subject" type="hidden" name="subject" value="">
+                    </div>
                  <div class="input-container" >  
                      <label class="label" for="project-type">Type of project</label>
                      <select style="cursor: pointer;" class="input-area" name="project-type" id="project-type" required>
@@ -236,4 +237,13 @@
     <!-- end -->
 </body>
 <script src="/script/file.js"></script>
+<script>
+    function updateSubject(){
+        const name = document.getElementById("name").value;
+        const clientMail = document.getElementById("email").value;
+        let val = "form submission from " + name + " "+ clientMail;
+        document.getElementById("subject").value = val;
+        console.log(val)
+    }
+</script>
 </html>

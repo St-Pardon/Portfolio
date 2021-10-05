@@ -34,7 +34,7 @@ html{
     border: 3px solid var(--theme);
     border-radius: 20px;
     color: var(--theme);
-    font-family: var(--para);
+    font-family: var(--header);
     font-size: 1rem;
     text-decoration: none;
     padding: 8px;
@@ -210,7 +210,7 @@ html{
         border: 3px solid #141c3a;
         border-radius: 20px;
         color: #141c3a;
-        font-family: var(--para);
+        font-family: var(--header);
         font-size: 1.4rem;
         text-decoration: none;
         padding: 8px;
