@@ -193,8 +193,8 @@
         <p class="footnote footnote3">Inspired by Matt Farley</p>
         <div id="forms" class="forms">
             <span class="close">&times;</span>
-            <p class="form-note">Highly excited to work on your project.<br>Let's do this!</p>
-             <form class="form" action="">
+            <p class="form-note">Highly excited to work on your project. Let's do this!</p>
+             <form class="form" action="/html/file.html" method="POST" name="contact" netlify>
                  <div class="input-container">  
                      <label class="label" for="name">Name</label>
                      <input class="input-area" id="name" name="name" autofocus type="text" spellcheck="false" required>
@@ -208,6 +208,8 @@
                      <select style="cursor: pointer;" class="input-area" name="project-type" id="project-type" required>
                          <option value="0" disabled selected hidden></option>
                          <option value="frontend developement">Frontend development</option>
+                         <option value="database development">Database development</option>
+                         <option value="data analyst">Data analyst</option>
                          <option value="backend development">Backend development</option>
                          <!-- <option value="server"></option> -->
                      </select>
@@ -228,9 +230,7 @@
                  </div>
         
                 <button id="submit" class="submit" type="submit">Submit</button>
-
              </form>
-
         </div>
     </footer>
     <!-- end -->

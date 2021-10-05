@@ -510,6 +510,7 @@ figure:hover figcaption{
     }
     .figure{
         width: 100%;
+        height: 275px;
    
     }
     .caption{
@@ -543,6 +544,9 @@ figure:hover figcaption{
     font-size: 1.8rem;
     font-weight: bold;
     margin-right: 20px;
+    position: absolute;
+    display: block;
+    right: 0;
   }
   
 .close:hover, .close:focus {
@@ -559,7 +563,6 @@ figure:hover figcaption{
 .form{
     width: 600px;
     margin: 0 auto;
-    /* border: 2px solid red; */
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
@@ -577,6 +580,7 @@ figure:hover figcaption{
     height: 40px;
     font-size: 1rem;
     border: 0.5px solid rgba(76, 236, 76, 0.4);
+    border-radius: 5px;
     color: black;
     padding: 5px;
     outline: none;
@@ -605,9 +609,84 @@ figure:hover figcaption{
     color: white;
     background-color: var(--theme);
 }
+/* success response  */
+
+#success{
+    width: 100%;
+    background-color: white;
+    text-align: center;
+}
+#success p:nth-child(1){
+    color: green;
+    font-size: 2.4rem;
+    padding: 60px 0 30px 0;
+    font-family: var(--header);
+    font-style: italic;
+}
+#success p:nth-child(2){
+    font-size: 1.2rem;
+    padding: 0 0 30px 0;
+    font-family: var(--para);
+    color: black;
+}
+#back{
+    border: 2px solid var(--theme);
+    padding: 5px 30px;
+    border-radius: 17px;
+    text-decoration: none;
+    color: var(--theme);
+    font-size: 1.2rem;
+}
+#back:hover{
+    background-color: var(--theme);
+    color: white;
+}
 @media screen and (max-width: 600px) {
     .input-container{
         width: 100%;
+    }
+    .textarea1{
+        height: 120px;
+    }
+    .textarea-container{
+        margin: 0;
+    }
+    .form{
+        width: 345px;
+        
+    }
+    .form-note{
+        margin: 30px 0 40px 0;
+        font-size: 1.3rem;
+    }
+    .submit{
+        padding: 10px 100px;
+        margin: 0 0 20px 0;
+        background-color: var(--theme);
+        color: white;
+    }
+    .submit:hover{
+        background-color: white;
+        color: var(--theme);
+    }
+    #success p:nth-child(1){
+        font-size: 2.2rem;
+    }
+    #success p:nth-child(2){
+        width: 80%;
+        margin: 0 auto 20px auto;
+    }
+    #back{
+        padding: 5px 50px;
+        background-color: var(--theme);
+        color: white;
+        display: block;
+        margin: 0 auto 10px auto;
+        width: 80%;
+    }
+    #back:hover{
+        color: var(--theme);
+        background-color: white;
     }
     
 }
@@ -768,3 +847,24 @@ figure:hover figcaption{
  
     }
 }
+
+
+/* scrollbar customization */
+
+::-webkit-scrollbar{
+    width: 10px;
+    background-color: #eff1f5;
+}
+
+::-webkit-scrollbar-track{
+    border-radius: 3px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb{
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #5a6072;
+    border: 2px solid #eff1f5;
+}
+
