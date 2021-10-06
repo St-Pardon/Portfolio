@@ -25,7 +25,9 @@
     
     <!-- style, script and ico links -->
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/main.css" type="text/css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="bower_components/aos/dist/aos.css" type="text/css"/> -->
     <script src="https://kit.fontawesome.com/17544686b3.js" crossorigin="anonymous"></script>
     
     <!-- page titile -->
@@ -55,14 +57,14 @@
             <h1>Front-end Developer and a Problem Solver</h1>
             <p>I code and I build beautiful website and web apps, and i enjoy it.</p>
         </div>
-        <div class="img-png">
+        <div class="img-png" data-aos="ease-in">
             <img src="/images/space code 3.svg" alt="laptop X coffee image">
         </div>
     </div>
     <!-- header section -->
     <section id="about" class="intro">
         <div class="container">
-            <div class="text-div">
+            <div class="text-div" data-aos="slide-up">
                 <div>
                     <h3>Hi, I'm Onyedikachi. Lovely to meet you.</h3>
                     <p>
@@ -72,7 +74,7 @@
             </div>
             <div class="skill-div">
                 <div class="skill-div-container">
-                    <div style="border-radius: 10px 0 0 10px;">
+                    <div style="border-radius: 10px 0 0 10px;" data-aos="slide-right">
                         <i class="fas fa-code"></i>
                         <h4>Frontend</h4>
                         <p>With 1+ year experience, i've made a project on the listed languages, and still workingto better my skills</p>
@@ -87,7 +89,7 @@
                             <li>FontAwesome</li>
                         </ul>
                     </div>
-                    <div>
+                    <div data-aos="fade-up">
                         <i class="fas fa-table"></i>
                         <h4>Data Science</h4>
                         <p>With specialty in academic research, i've been working with the listed statistical tools for 5+ years.</p>
@@ -102,7 +104,7 @@
                             <li>Codepen</li>
                         </ul>
                     </div>
-                    <div style="border-radius: 0 10px 10px 0; ">
+                    <div style="border-radius: 0 10px 10px 0; " data-aos="slide-left">
                         <i class="fas fa-database"></i>
                         <h4>Database</h4>
                         <p>With 2 months experience, i'm working to better improve my skill nd working  data.</p>
@@ -122,7 +124,7 @@
         </div>
     </section>
     <!-- project section -->
-    <section id="project" class="my-projects">
+    <section id="project" class="my-projects" data-aos="fade-up">
         <h2 class="project-section-title">My Recent Works</h2>
         <p class="project-section-description">Here are few projects I'm working. Want to see more? <a href="" style="text-decoration: none;">my github</a></p>
         <div class="fig-container">
@@ -168,16 +170,16 @@
     <img src="./images/logo1.jpg" style="display: none;" alt="">
    <!-- footer section  -->
    <footer class="footer">
-       <div class="start-a-project">
+       <div class="start-a-project" data-aos="flip-up">
            <p class="sap-child">Start a project</p>
             <p class="sap-child">Interested in working together? We should meet up for a chat. I’ll love to have you.</p>
             <div  class="sap-child">
                 <a id="open-form">Let's do this</a>
             </div>
         </div>
-        <h3>St. Pardon</h3>
+        <h3 data-aos="fade-up">St. Pardon</h3>
         <p class="footnote footnote1">Building the future</p>
-        <div class="contact-icons">
+        <div class="contact-icons" data-aos="fade-up">
             <a href="https://web.facebook.com/St_Pardon-Inc-1609476265978914" target="_blank" class="contact-btn"> 
                 <i class="fab fa-facebook"></i></a>
             <a href="https://twitter.com/st_Pardon" target="_blank" class="contact-btn"> 
@@ -237,7 +239,17 @@
     <!-- end -->
 </body>
 <script src="/script/file.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<!-- <script src="bower_components/aos/dist/aos.js"></script> -->
 <script>
+    // animate on scroll initialization
+    AOS.init({
+        offset: 200,
+        duration: 1000,
+    });
+
+    // form submission event
     function updateSubject(){
         const name = document.getElementById("name").value;
         const clientMail = document.getElementById("email").value;
