@@ -395,6 +395,7 @@ html{
     margin: 0 auto;
     padding: 0;
     flex-wrap: wrap;
+    row-gap: 30px;
     justify-content: space-around;
     overflow: hidden;
     width: 70%;
