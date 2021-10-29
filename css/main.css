@@ -22,7 +22,7 @@ html{
     justify-content: space-between;
 }
 .logo{
-    margin: 15px 0 0 50px;
+    margin: 20px 0 0 50px;
 }
 .logo h2, .footer h3{
     color: var(--theme);
@@ -86,7 +86,7 @@ html{
 .navbar ul{
     list-style: none;
     line-height: 1.5;
-    margin: 20px 20px;      
+    margin: 25px 20px;      
 }
 .nav-links{
     display: inline-block;
@@ -98,6 +98,7 @@ html{
     text-decoration: none;
     color: var(--theme);
     font-size: 1.2rem;
+    font-family: var(--header)
 }
 .nav-links:hover a{
     color: white;
