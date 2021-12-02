@@ -168,15 +168,17 @@ html{
     }
     .hamburger{
         display: block;
+        margin: 10px 20px 0 0;
     }
-    .fa-bars{
+    #menu-icon{
         display: block;
-        position: absolute;
+        /* position: absolute; */
         font-size: 2rem;
-        top: 15;
-        right: 15;
+        /* top: 15;
+        right: 15; */
         cursor: pointer;
         color: var(--theme);
+        z-index: 99;
     }
     .navbar.open{
         clip-path: circle(1500px at 90% 10%);
@@ -758,6 +760,7 @@ figure:hover figcaption{
 }
  .footnote3{
     padding: 10 0 80px 0;
+    margin-bottom: 20px;
 }
 .contact-icons{
     margin: 30px auto;

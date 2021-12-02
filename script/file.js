@@ -2,21 +2,34 @@ const nav = document.querySelector(".navbar");
 const hamburger = document.querySelector(".fa-bars");
 const links = document.getElementsByClassName("links");
 const header = document.querySelector(".header");
+const menu = document.getElementById('menu-icon')
 
 hamburger.addEventListener("click", () => {
     nav.classList.remove("close");
     nav.classList.toggle("open");
     header.classList.remove("collapse");
-});
-links[0].onclick = () => {
+    if(nav.className == "navbar open"){
+      menu.classList.remove("fa-bars");
+      menu.classList.add("fa-times");
+    }else{
+      menu.classList.add("fa-bars");
+      menu.classList.remove("fa-times");
+    }
+    
+  });
+  links[0].onclick = () => {
     nav.classList.remove("open");
     nav.classList.toggle("close");
     header.classList.toggle("collapse");
-};
-links[1].onclick = () => {
+    menu.classList.add("fa-bars");
+    menu.classList.remove("fa-times");
+  };
+  links[1].onclick = () => {
     nav.classList.remove("open");
     nav.classList.toggle("close");
     header.classList.toggle("collapse");
+    menu.classList.add("fa-bars");
+    menu.classList.remove("fa-times");
 }; 
 
 
