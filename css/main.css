@@ -7,7 +7,8 @@
   --logo: "Zen Tokyo Zoo", cursive;
   --header: "Barlow", sans-serif;
   --para: "Yomogi", cursive;
-  --theme: rgb(76, 236, 76);
+  --theme: rgb(28 126 28);
+  /* --theme: rgb(76, 236, 76); */
 }
 html {
   scroll-behavior: smooth;
