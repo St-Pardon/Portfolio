@@ -2,7 +2,7 @@
   "name": "backend",
   "version": "0.0.1",
   "description": "",
-  "author": "",
+  "author": "Onyedikachi Onu",
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
@@ -22,7 +22,10 @@
   "dependencies": {
     "@nestjs/common": "^10.0.0",
     "@nestjs/core": "^10.0.0",
+    "@nestjs/mongoose": "^10.0.1",
     "@nestjs/platform-express": "^10.0.0",
+    "dotenv": "^16.3.1",
+    "mongoose": "^7.4.5",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.8.1"
   },
