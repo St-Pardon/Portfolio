@@ -1,15 +1,13 @@
-import { Injectable } from '@nestjs/common';
+import { BadRequestException, Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import * as bcrypt from 'bcrypt';
 import { JwtService } from '@nestjs/jwt';
 import { User, UserDocument } from 'src/modules/user/user.entity';
 import { UserService } from 'src/modules/user/user.service';
-// import { SigninObj } from 'src/shared/interfaces/user.interface';
 
 @Injectable()
 export class AuthService {
-  //   constructor(@InjectModel(User.name) private userModel: Model<UserDocument>) {}
   constructor(
     @InjectModel(User.name) private userModel: Model<UserDocument>,
     private readonly userService: UserService,
@@ -18,56 +16,51 @@ export class AuthService {
 
   async validateUser(username: string, password: string): Promise<any> {
     const detail = username.includes('@') ? { email: username } : { username };
+    let user = await this.userService.getUser(detail);
 
-    const user = await this.userService.getUser(detail);
-    console.log(user);
+    if (user && (await bcrypt.compare(password, user.password))) {
+      user = user.toJSON();
 
-    if (user && bcrypt.compare(password, user.password)) {
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      const { password, ...result } = user;
-      return result;
+      return user;
     }
     return null;
   }
 
   async login(user: any) {
-    const payload = { username: user.username, sub: user.userId };
+    const { username, _id: userId } = user;
+    const payload = { username, sub: userId };
+
     return {
       access_token: this.jwtService.sign(payload),
+      userId,
     };
   }
-  //   async signup(user: User): Promise<User> {
-  //     const userOb = new User();
 
-  //     userOb.firstname = user['firstname'];
-  //     userOb.lastname = user['lastname'];
-  //     userOb.email = user['email'];
-  //     userOb.password = user['password'];
-  //     userOb.username = user['username'];
-
-  //     userOb.hashPassword();
-
-  //     // const newUser = userOb();
-  //     return userOb.save();
-  //   }
   async signup(user: User): Promise<User> {
-    const userOb = new this.userModel(user);
-    // user.hashPassword();
-    console.log(userOb);
+    const { firstname, lastname, email, password, username, userRole } = user;
+    console.log(firstname, lastname, email, password, username, userRole);
 
-    // userOb.firstname = user.firstname;
-    // userOb.lastname = user.lastname;
-    // userOb.email = user.email;
-    // userOb.password = user.password;
-    // userOb.username = user.username;
+    // Check if a user with the same email or username already exists
+    const checkEmail = await this.userService.getUser({ email });
+    const checkUsername = await this.userService.getUser({ username });
 
-    // console.log(userOb);
+    if (checkEmail) {
+      throw new BadRequestException('User with this email already exists.');
+    }
+
+    if (checkUsername) {
+      throw new BadRequestException('User with this username already exists.');
+    }
+
+    const userOb = new this.userModel({
+      firstname,
+      lastname,
+      email,
+      password,
+      username,
+      userRole,
+    });
 
     return userOb.save();
   }
-
-  //   async createProject(project: Project): Promise<Project> {
-  //     const newProject = new this.projectModel(project);
-  //     return newProject.save();
-  //   }
 }
