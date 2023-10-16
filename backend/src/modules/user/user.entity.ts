@@ -35,17 +35,30 @@ export class User extends Document {
     default: Date.now,
   })
   updatedAt: Date;
+
+  toJSON() {
+    const object = this.toObject();
+    return object;
+  }
 }
+
 export const UserSchema = SchemaFactory.createForClass(User);
 
-// Define a pre-save middleware to hash the password before saving
+// A pre-save middleware to hash the password before saving
 UserSchema.pre('save', async function (next) {
-  // 'this' refers to the current User document
-
   if (this.isModified('password')) {
-    this.password = await bcrypt.hash(this.password, 10); // You can adjust the salt rounds
+    this.password = await bcrypt.hash(this.password, 10);
   }
+
   next();
+});
+
+// Prevent password from being displayed
+UserSchema.set('toJSON', {
+  transform: (_document, returnedObject) => {
+    delete returnedObject.__v;
+    delete returnedObject.password;
+  },
 });
 
 export type UserDocument = User & Document;
